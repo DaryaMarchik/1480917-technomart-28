@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дарья Марчик](https://up.htmlacademy.ru/htmlcss/28/user/1480917).
-* Наставник: `Неизвестно`.
+* Наставник: [Егор Дорош](https://htmlacademy.ru/profile/edorosh).
 
 ---
 
