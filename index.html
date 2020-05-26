@@ -7,8 +7,10 @@
 <body>
 <header>
   <a href="index.html">Техномарт</a>
-
-  <!--Здесь будет форма с поиском-->
+  <form action="https://echo.htmlacademy.ru/" method="get">
+    <label for "search" class="visually-hidden"> Строка поиска </label>
+    <input type="search" name="search" id="search" placeholder="Поиск">
+  </form>
     <a href=""> Закладки: 0 </a>
     <a href=""> Корзина: 0 </a>
     <a href=""> Оформить заказ </a>
@@ -53,8 +55,20 @@
 <section>
   <h2>Контакты</h2>
   <p>Вы можете забрать товар сами,заехав в наш офис:</p>
-<img src="img/karta.png" width="300" height="158" alt="Офис на карте">
-  <a href=""><span>Заблудились? Напишите нам!</span></a>
+<a href="https://yandex.by/maps/-/CCQza8XStA"><img src="img/karta.png" width="300" height="158" alt="Офис на карте"></a>
+
+  <p><a href=""><span>Заблудились? Напишите нам!</span></a></p>
+  <form action="https://echo.htmlacademy.ru/" method="post">
+    <label for "name"> Ваше имя: </label>
+    <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+
+    <label for "email"> Ваш email: </label>
+    <input type="email" name="email" id="email" placeholder="email@example.com">
+
+    <p><label for "pismo"> Текст письма </label></p>
+<p><textarea name="pismo" id="pismo" placeholder="В свободной форме" rows="5"></textarea></p>
+<button type="submit">Оформить заказ</button>
+  </form>
 </section>
 </main>
 <footer>
