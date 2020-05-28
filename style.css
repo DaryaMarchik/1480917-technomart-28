@@ -1,0 +1,324 @@
+/* Variables */
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-black: #293449;
+  --basic-blackclick: #1D2739;
+  --basic-white: #FFFFFF;
+  --basic-navigation: #32425C;
+  --basic-user:#000000;
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --special-success: #5FBB2D;
+  --special-warning: #FFBF47;
+  --special-error: #BA2732;
+  --special-greylight: #EAEAEA;
+  --special-social: #212A3A;
+  --special-input: #A9A9A9;
+  }
+/* Global */
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header-background */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.header-upper {
+  background-color: var(--basic-black);
+}
+
+.header-main {
+  background-color: var(--basic-background);
+}
+
+.header-upper a{
+  font-family: "Cuprum", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+.header-upper a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.green-button-order {
+  vertical-align: middle;
+  background-color: var(--basic-green);
+  padding: 9px 16px 9px 19px;
+  border: none;
+}
+
+.green-button-order:hover {
+  background-color: var(--special-success);
+}
+
+.green-button-order:active {
+  background-color: var(--basic-green);
+}
+
+h1 {
+  color: var(--basic-red);
+  font-family: "Cuprum", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Header-contacts */
+.header-phone {
+  font-family: "Cuprum", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+  text-align: center;
+}
+
+
+.header-address {
+  font-family: "Cuprum",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-navigation);
+  text-align: center;
+}
+
+/* User-navigation */
+.user-navigation {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  list-style: none;
+}
+
+.button-user {
+  color: var(--basic-user);
+  vertical-align: middle;
+  background-color: var(--basic-white);
+  border: none;
+}
+.login {
+  padding: 12px 27px 12px 45px;
+}
+
+.registration {
+  padding: 12px 24px;
+}
+
+.user-navigation a:hover {
+  color: var(--basic-red);
+}
+
+.user-navigation a:active {
+  color: var(--basic-greylight);
+}
+/* Main-navigation */
+.main-navigation {
+  background-color: var(--basic-navigation);
+  box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
+}
+.main-navigation a {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.main-navigation a:hover {
+  background-color: var(--basic-black);
+  box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
+}
+
+.main-navigation a:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--basic-blackclick);
+  box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
+}
+.site-navigation {
+  list-style: none;
+}
+
+
+
+/* Company-description */
+.company {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-user);
+}
+
+h2 {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-user);
+}
+
+.list-companies {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-user);
+  list-style: none;
+}
+.red-button {
+  font-family: "Cuprum", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  vertical-align: middle;
+  background-color: var(--basic-red);
+  border: none;
+}
+
+.red-button-company {
+  padding: 11px 40.29px 9px 39.71px;
+}
+
+.red-button-feedback {
+  padding: 11px 61.12px 9px 61.88px;
+}
+
+.red-button:active {
+  background-color: var(--special-error);
+}
+
+.form-header {
+  font-family: "Cuprum", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-user);
+}
+
+.appointment-item input,
+.appointment-item textarea {
+   border: 2px solid var(--basic-greylight);
+   border-radius: 2px;
+   color: var(--special-input);
+   font-family: "PT Sans", sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 24px;
+}
+
+.red-button-order {
+  padding: 11px 180.79px 9px 180.21px;
+}
+/* Footer */
+.footer-background-1 {
+  background-color: var(--basic-navigation);
+}
+
+.footer-background-2 {
+  background-color: var(--basic-black);
+}
+
+.footer-contacts {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-background);
+}
+
+.footer-nav-1,
+.footer-nav-2 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+}
+.footer-nav-1 a {
+  color: var(--basic-background);
+}
+.footer-nav-2 a {
+  color: var(--special-yellowlight);
+}
+.footer-nav-1 a:hover,
+.footer-nav-2 a:hover {
+  text-decoration-line: underline;
+}
+.footer-nav-1 a:active {
+  color: rgba(241, 245, 247, 0.5);
+  text-decoration-line: none;
+}
+.footer-nav-2 a:active {
+  color: rgba(255, 209, 128, 0.5);
+  text-decoration-line: none;
+}
+
+.footer-text {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  color: var(--basic-white);
+}
+
+.footer-yellow {
+  color: var(--special-yellowlight);
+}
+
+.footer-yellow:hover {
+  text-decoration-line: underline;
+}
+
+.footer-yellow:active {
+  color: var(--basic-red);
+  text-decoration-line: none;
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.social-button {
+  background-color: var(--special-social);
+}
+
+.social-button:hover{
+  background-color: var(--basic-red);
+}
