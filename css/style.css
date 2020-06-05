@@ -30,6 +30,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--basic-white);
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Cuprum",sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 a {
@@ -51,7 +56,20 @@ img {
 }
 
 /* Header-background */
-
+.logo {
+   display: block;
+   width: 220px;
+   height: 47px;
+   font-size: 24px;
+   line-height: 24px;
+   color: var(--basic-white);
+   background-color: var(--basic-red);
+   text-transform: uppercase;
+   text-align: center;
+   padding-top: 12px;
+   padding-bottom: 12px;
+   border-bottom: 5px solid #b52933;
+}
 .header-upper {
   background-color: var(--basic-black);
 }
@@ -63,11 +81,6 @@ img {
 
 /* Ссылки в верхней части header */
 .header-upper a {
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
   color: var(--basic-white);
 }
 
@@ -97,18 +110,22 @@ img {
   background-color: var(--basic-green);
 }
 
+.search input[type="search"] {
+  background-color: var(--basic-black);
+  -webkit-appearance:none;
+  border: none;
+}
+
 /* Header-main */
-h1 {
+.shop {
   color: var(--basic-red);
-  font-family: "Cuprum", sans-serif;
   font-size: 16px;
+  line-height: 23px;
   font-style: italic;
   font-weight: normal;
 }
 
 .header-phone {
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
@@ -117,20 +134,13 @@ h1 {
 }
 
 .header-address {
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
   color: var(--basic-navigation);
   text-align: center;
 }
 
 /* User-navigation */
 .user-navigation {
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
@@ -164,7 +174,6 @@ h1 {
   list-style: none;
 }
 .personal-account a {
-  font-family: "Cuprum", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color:var(--basic-navigation);
@@ -182,9 +191,6 @@ h1 {
   box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
 }
 .main-navigation a {
-  font-family: "Cuprum", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
   color: var(--basic-white);
 }
 
@@ -205,16 +211,11 @@ h1 {
 /* Company-description */
 .company {
   font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 13px;
-  line-height: 24px;
   color: var(--basic-user);
 }
 
 h2 {
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -223,17 +224,11 @@ h2 {
 }
 
 .list-companies {
-  font-family: "Cuprum", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
   color: var(--basic-user);
   list-style: none;
 }
 
 .red-button {
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -257,11 +252,6 @@ h2 {
 
 /* Form */
 .form-header {
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
   color: var(--basic-user);
 }
 
@@ -271,13 +261,11 @@ h2 {
    border-radius: 2px;
    color: var(--special-input);
    font-family: "PT Sans", sans-serif;
-   font-style: normal;
-   font-weight: normal;
    font-size: 13px;
-   line-height: 24px;
 }
 
 .red-button-order {
+  font-family: "Cuprum",sans-serif;
   padding: 11px 180.79px 9px 180.21px;
 }
 
@@ -291,17 +279,11 @@ h2 {
 }
 
 .footer-contacts {
-  font-family: "Cuprum", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
   color: var(--basic-background);
 }
 
 .footer-nav-1,
 .footer-nav-2 {
-  font-family: "Cuprum", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
   list-style: none;
 }
 .footer-nav-1 a {
@@ -324,9 +306,6 @@ h2 {
 }
 
 .footer-text {
-  font-family: "Cuprum", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
   text-align: left;
   color: var(--basic-white);
 }
@@ -350,6 +329,11 @@ h2 {
 
 .social-button {
   background-color: var(--special-social);
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-right: 5px;
 }
 
 .social-button:hover{
@@ -359,8 +343,6 @@ h2 {
 /* Страница каталога: хлебные крошки + заголовок */
 .breadcrumbs a {
   font-family: "PT Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -374,9 +356,8 @@ h2 {
 }
 
 /* Filters */
-h3 {
+.headline-filter h3{
   font-family: "PT Sans",sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -386,7 +367,6 @@ h3 {
 
 .filter legend {
   font-family: "PT Sans",sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -400,8 +380,6 @@ h3 {
 
 .filter li {
   font-family: "PT Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
@@ -439,7 +417,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item h3 {
   font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -450,7 +427,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item-price-standart {
   font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -462,7 +438,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item-price-old {
   font-family: "PT Sans",sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -476,9 +451,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   background-color: var(--basic-red);
   transform: rotate(45deg);
   position: absolute;
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -500,9 +472,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item:hover .button-buy {
   display: block;
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -515,9 +484,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item:hover .button-buy:hover {
   display:block;
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -530,9 +496,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item:hover .button-buy:active {
   display:block;
-  font-family: "Cuprum", sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -545,9 +508,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item:hover .button-bookmark {
   display: block;
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   border: 3px solid #63A63E;
@@ -560,9 +520,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item:hover .button-bookmark:hover {
   display: block;
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   border: 3px solid #32425C;
@@ -575,9 +532,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .catalog-item:hover .button-bookmark:active {
   display: block;
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   border: 3px solid #32425C;
@@ -590,8 +544,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 /* Оформление попапа */
 .notification-basket {
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -605,9 +557,6 @@ box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 
 .white-button-continue {
   background-color: var(--basic-white);
-  font-family: "Cuprum",sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
