@@ -281,13 +281,13 @@ input[type="search"] {
 }
 
 .links-header .basket {
-  display: inline-block;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 49px;
   padding-right: 26px;
   margin: 0;
   position: relative;
+  display: inline-block;
 }
 
 .links-header .basket::before {
@@ -1559,12 +1559,22 @@ button:focus {
 }
 
 .footer-contacts {
-  color: var(--basic-background);
+  color: #F3F7F9;
   margin: 0;
   width: 327px;
   margin-left: 3px;
   margin-top: 2px;
 }
+
+.footer-contacts p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contacts a {
+  color: #F3F7F9;
+}
+
 
 .footer-nav-1 {
   display: flex;
@@ -2427,7 +2437,6 @@ button:focus {
   top: 10px;
   left: 30px;
 }
-
 
 .catalog-item:hover .button-bookmark {
   display: block;
