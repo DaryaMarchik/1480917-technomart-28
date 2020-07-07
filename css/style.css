@@ -109,7 +109,7 @@ img {
   font-style: normal;
 }
 
-/* Гриды */
+/* Основная раскладка */
 .page {
   height: 100%;
 }
@@ -127,7 +127,6 @@ img {
   padding: 0 10px;
 }
 
-
 /* Скрываем элементы */
 .visually-hidden {
   position: absolute;
@@ -137,7 +136,24 @@ img {
   margin: -1px;
 }
 
-/* Header-background */
+/* Верхний блок: header */
+.header-main {
+  background-color: var(--basic-background);
+  margin-bottom: 59px;
+}
+
+.header-upper {
+  background-color: var(--basic-black);
+  height: 42px;
+}
+
+.header-upper-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 .logo-header {
    display: block;
@@ -150,10 +166,7 @@ img {
    text-transform: uppercase;
    text-align: center;
    padding-top: 10px;
-   padding-bottom: 12px;
    border-bottom: 5px solid #b52933;
-   box-sizing: border-box;
-   margin-right: 0px;
 }
 
 .logo-header:active {
@@ -162,18 +175,6 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.header-upper {
-  background-color: var(--basic-black);
-  height: 42px;
-}
-
-.header-main {
-  background-color: var(--basic-background);
-  margin-bottom: 59px;
-}
-
-
-/* Ссылки в верхней части header */
 .search {
   position: relative;
   display: inline-block;
@@ -184,7 +185,7 @@ img {
   width: 271px;
   font-size: 18px;
   line-height: 24px;
-  font-family: "Cuprum",sans-serif;
+  font-family: "Cuprum", "Helvetica", sans-serif;
   color: #ffffff;
   outline: 0;
   outline-offset: 0;
@@ -193,7 +194,7 @@ img {
 }
 
 .search input[type="search"]::-webkit-input-placeholder {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
@@ -204,7 +205,7 @@ img {
   color: var(--basic-user);
 }
 
-.search-button  {
+.search-button {
   position: absolute;
   top: 12px;
   left: 17px;
@@ -244,6 +245,12 @@ input[type="search"] {
 -webkit-appearance: textfield;
 }
 
+.search input[type="search"] {
+  background-color: var(--basic-black);
+  -webkit-appearance:none;
+  border: none;
+}
+
 .links-header a {
   color: var(--basic-white);
 }
@@ -258,24 +265,6 @@ input[type="search"] {
   padding-left: 43px;
   padding-right: 24px;
   position: relative;
-}
-
-.links-header .bookmark:hover::before,
-.links-header .basket:hover::before,
-.links-header .basket-full:hover::before
- {
-	opacity: 1;
-}
-
-.links-header .bookmark:active::before,
-.links-header .basket:active::before,
-.links-header .basket-full:active::before {
-  opacity: 0.3;
-}
-
-.bookmark:active,
-.basket:active {
-  background-color: var(--special-black);
 }
 
 .links-header .bookmark::before {
@@ -314,7 +303,6 @@ input[type="search"] {
   background-position: 0 0;
 }
 
-
 .links-header .basket-full {
   background-color: var(--basic-red);
   padding-top: 9px;
@@ -350,6 +338,23 @@ input[type="search"] {
   margin: 0;
 }
 
+.links-header .bookmark:hover::before,
+.links-header .basket:hover::before,
+.links-header .basket-full:hover::before {
+	opacity: 1;
+}
+
+.links-header .bookmark:active::before,
+.links-header .basket:active::before,
+.links-header .basket-full:active::before {
+  opacity: 0.3;
+}
+
+.bookmark:active,
+.basket:active {
+  background-color: var(--special-black);
+}
+
 .green-button-order:hover {
   background-color: var(--special-success);
 }
@@ -358,24 +363,9 @@ input[type="search"] {
   background-color: var(--basic-green);
 }
 
-.search input[type="search"] {
-  background-color: var(--basic-black);
-  -webkit-appearance:none;
-  border: none;
-}
-
-/* Header-main */
-.header-upper-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  width: 960px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
+/* Основной блок: header */
 .header-contacts-user {
   display: flex;
-  justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 35px;
 }
@@ -453,14 +443,12 @@ input[type="search"] {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
   margin: 0;
   padding: 0;
 }
 
 .button-user {
   color: var(--basic-user);
-  vertical-align: middle;
   background-color: var(--basic-white);
   border: none;
 }
@@ -499,6 +487,7 @@ input[type="search"] {
   padding-bottom: 12px;
   margin-top: 46px;
 }
+
 .name-user {
   display: block;
   text-align: center;
@@ -511,33 +500,38 @@ input[type="search"] {
   width: 299px;
   position: relative;
 }
+
 .user-navigation a:hover {
   color: var(--basic-red);
 }
+
 .user-navigation a:active {
   color: var(--basic-greylight);
 }
+
 .name-user:active {
   color: var(--basic-greylight);
 }
+
 .personal-account {
   list-style: none;
   display: flex;
   padding-left: 44px;
   margin: 0;
 }
+
 .personal-account a {
   font-size: 16px;
   line-height: 18px;
-  color:var(--basic-navigation);
+  color: var(--basic-navigation);
   padding-right: 32px;
 }
 
 .personal-account a:hover {
-  color:var(--basic-red);
+  color: var(--basic-red);
 }
 .personal-account a:active {
-  color:var(--basic-greylight);
+  color: var(--basic-greylight);
 }
 
 .personal-account li {
@@ -554,7 +548,6 @@ input[type="search"] {
   top: 9px;
   left: 89px;
 }
-
 
 .user-navigation-catalog a.name-user::before {
   background-image: url("../img/icon-user.svg");
@@ -598,8 +591,7 @@ a.icon-logout:hover {
   position: relative;
 }
 
-
-/* Main-navigation */
+/* Navigation */
 .main-navigation {
   background-color: var(--basic-navigation);
   box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
@@ -617,14 +609,6 @@ a.icon-logout:hover {
   color: var(--basic-white);
 }
 
-.main-navigation a:first-child {
-  padding-left: 26px;
-  padding-right: 31px;
-}
-
-.main-navigation li:nth-child(4) a {
-  padding-left: 28px;
-}
 .main-navigation a:hover {
   background-color: var(--basic-black);
   box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
@@ -636,11 +620,20 @@ a.icon-logout:hover {
   box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
 }
 
-.site-navigation-wrapper .site-navigation {
+.main-navigation a:first-child {
+  padding-left: 26px;
+  padding-right: 31px;
+}
+
+.main-navigation li:nth-child(4) a {
+  padding-left: 28px;
+}
+
+.site-navigation {
   display: flex;
   width: 940px;
   min-height: 60px;
-  justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: flex-start;
   margin: 0;
   padding: 0;
@@ -660,7 +653,6 @@ a.icon-logout:hover {
 .promo-item {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
   width: 300px;
   height: 123px;
@@ -673,10 +665,8 @@ a.icon-logout:hover {
 .container-slider {
   width: 620px;
   height: 266px;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-column: 1/3;
+  grid-row: 2/4;
   position: relative;
   margin: 0;
   padding: 0;
@@ -797,7 +787,6 @@ a.icon-logout:hover {
   background-image: url("../img/dreli.jpg");
 }
 
-
 .promo-item .new-item-promo {
   position: absolute;
   display: block;
@@ -865,6 +854,7 @@ a.icon-logout:hover {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+
 .promo-item-4 {
   background-color: var(--special-greenlight);
   position: relative;
@@ -909,6 +899,7 @@ a.icon-logout:hover {
   padding: 0;
   margin-bottom: 14px;
 }
+
 .promo-item a {
   color: var(--basic-white);
   margin-left: 23px;
@@ -926,7 +917,7 @@ a.icon-logout:hover {
   background-color: rgba(197, 197, 197, 0.3);
 }
 
-.promo-item a:active{
+.promo-item a:active {
   background-color: rgba(169, 169, 169, 0.3);
 }
 
@@ -975,7 +966,7 @@ a.icon-logout:hover {
   background-color: var(--special-red);
 }
 
-.background-beige a:active{
+.background-beige a:active {
   background-color: var(--special-error);
 }
 
@@ -993,7 +984,6 @@ a.icon-logout:hover {
 .popular-products .catalog-item {
   margin-bottom: 0;
 }
-
 
 /* Популярные производители */
 .list-maker {
@@ -1039,7 +1029,7 @@ a.icon-logout:hover {
   width: 100%;
 }
 
-/* Company-description */
+/* Описание компании */
 .main-company {
   display: flex;
   margin-bottom: 70px;
@@ -1047,6 +1037,7 @@ a.icon-logout:hover {
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .company-main-box {
   width: 478px;
 }
@@ -1056,7 +1047,7 @@ a.icon-logout:hover {
 }
 
 .company {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 13px;
   color: var(--basic-user);
 }
@@ -1069,11 +1060,7 @@ h2 {
   color: var(--basic-user);
 }
 
-.company-main-box h2 {
-  margin: 0;
-  margin-bottom: 24px;
-}
-
+.company-main-box h2,
 .contacts-main-box h2 {
   margin: 0;
   margin-bottom: 24px;
@@ -1137,6 +1124,14 @@ p.company:nth-of-type(2) {
   border: none;
 }
 
+.red-button:hover {
+  background-color: var(--special-red);
+}
+
+.red-button:active {
+  background-color: var(--special-error);
+}
+
 .red-button-company {
   display: block;
   width: 220px;
@@ -1152,17 +1147,10 @@ p.company:nth-of-type(2) {
   padding-top: 11px;
   padding-bottom: 9px;
 }
+
 .contacts-main-box img {
   display: block;
   margin-bottom: 25px;
-}
-
-.red-button:hover {
-  background-color: var(--special-red);
-}
-
-.red-button:active {
-  background-color: var(--special-error);
 }
 
 /* Сервисы */
@@ -1178,7 +1166,7 @@ p.company:nth-of-type(2) {
 }
 
 .blue-background-main p {
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 13px;
   margin: 0;
   padding: 0;
@@ -1236,7 +1224,7 @@ p.company:nth-of-type(2) {
 .service-controls button::before {
   position: absolute;
   height: 30px;
-  font-family: "Cuprum";
+  font-family: "Cuprum", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
@@ -1290,7 +1278,6 @@ button:active,
 button:focus {
     outline: none;
 }
-
 
 .service-block {
   display: flex;
@@ -1489,15 +1476,15 @@ button:focus {
 
 .appointment-item input,
 .appointment-item textarea {
-   border: 2px solid var(--basic-greylight);
-   border-radius: 2px;
-   color: var(--special-input);
-   font-family: "PT Sans", sans-serif;
-   font-size: 13px;
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+  color: var(--special-input);
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  font-size: 13px;
 }
 
 .red-button-order {
-  font-family: "Cuprum",sans-serif;
+  font-family: "Cuprum", "Helvetica", sans-serif;
   display: block;
   width: 460px;
   padding-top: 11px;
@@ -1511,7 +1498,6 @@ button:focus {
   width: 620px;
   padding: 37px 80px;
 }
-
 
 /* Footer */
 .footer-background-1 {
@@ -1549,7 +1535,6 @@ button:focus {
   padding: 0 10px;
 }
 
-
 .logo-footer {
   display: block;
   width: 220px;
@@ -1580,6 +1565,7 @@ button:focus {
   margin-left: 3px;
   margin-top: 2px;
 }
+
 .footer-nav-1 {
   display: flex;
   margin: 0;
@@ -1602,20 +1588,25 @@ button:focus {
 .footer-nav-2 {
   list-style: none;
 }
+
 .footer-nav-1 a {
   color: var(--basic-background);
 }
+
 .footer-nav-2 a {
   color: var(--special-yellowlight);
 }
+
 .footer-nav-1 a:hover,
 .footer-nav-2 a:hover {
   text-decoration-line: underline;
 }
+
 .footer-nav-1 a:active {
   color: rgba(241, 245, 247, 0.5);
   text-decoration-line: none;
 }
+
 .footer-nav-2 a:active {
   color: rgba(255, 209, 128, 0.5);
   text-decoration-line: none;
@@ -1659,11 +1650,12 @@ button:focus {
   margin-right: 3px;
   text-align: center;
 }
+
 .social-button svg {
   margin: auto;
 }
 
-.social-button:hover{
+.social-button:hover {
   background-color: var(--basic-red);
 }
 
@@ -1681,7 +1673,7 @@ button:focus {
   width: 98px;
 }
 
-/* Каталог: раскладка */
+/* Каталог: раскладка + хлебные крошки + заголовок */
 .page-catalog {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -1701,13 +1693,13 @@ button:focus {
   padding-left: 29px;
   margin-top: 29px;
   margin-bottom: 29px;
+  color: var(--basic-navigation);
 }
 
 .catalog {
   margin-left: 20px;
 }
 
-/* Страница каталога: хлебные крошки + заголовок */
 .page-catalog .breadcrumbs {
   grid-column: 1 / -1;
   margin-top: -38px;
@@ -1719,7 +1711,7 @@ button:focus {
 }
 
 .breadcrumbs li {
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1750,7 +1742,6 @@ button:focus {
   display: none;
 }
 
-
 .breadcrumbs-first a {
   display: block;
   background: url("../img/icon-home.svg") no-repeat;
@@ -1763,7 +1754,6 @@ button:focus {
   top: 3px;
   right: -24px;
 }
-
 
 /* Фильтр с диапазоном */
 .filter-item {
@@ -1778,7 +1768,7 @@ button:focus {
 }
 
 .filter-item legend {
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
@@ -1834,7 +1824,7 @@ button:focus {
 }
 
 .price-controls input {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 17px;
   line-height: 18px;
   width: 95px;
@@ -1870,7 +1860,7 @@ button:focus {
   top: 63px;
 }
 
-/* Filters */
+/* Фильтр основной */
 .column-left-catalog {
   grid-column: 1;
 }
@@ -1880,7 +1870,7 @@ button:focus {
 }
 
 .headline-filter h3 {
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -1906,7 +1896,7 @@ button:focus {
 }
 
 .filter legend {
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -1928,7 +1918,7 @@ button:focus {
 }
 
 .filter li {
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
@@ -2075,7 +2065,7 @@ button:focus {
   color: var(--basic-user);
   background-color: var(--basic-white);
   border: 1px solid #E5E5E5;
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2088,8 +2078,7 @@ button:focus {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Pagination */
+/* Пагинация */
 .pagination-list {
   padding: 0;
   margin: 0;
@@ -2100,27 +2089,15 @@ button:focus {
 
 .pagination-item a {
   display: block;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 18px;
-  display: block;
-  padding: 10px 15px;
+  width: 38px;
+  padding: 9px 14px;
   color: var(--basic-user);
   background-color: var(--basic-white);
   border: 1px solid #E5E5E5;
   border-radius: 2px;
-}
-
-.pagination-item:last-child {
-  width: 140px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.page-open a {
-  background-color: var(--basic-red);
-  border: 1px solid #EE3643;
-  color: var(--basic-white);
 }
 
 .pagination-item a:hover {
@@ -2129,6 +2106,29 @@ button:focus {
 
 .pagination-item a:active {
   border: 1px solid #EE3643;
+}
+
+.pagination-item:last-child {
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 0;
+}
+
+.pagination-item:last-child a {
+  width: 140px;
+}
+
+.page-open a {
+  display: block;
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 9px 14px;
+  background-color: var(--basic-red);
+  border: 1px solid #EE3643;
+  color: var(--basic-white);
+  border-radius: 2px;
+  cursor: default;
 }
 
 .page-open a:hover,
@@ -2140,10 +2140,6 @@ button:focus {
   margin-right: 10px;
 }
 
-.pagination-item:last-child {
-  margin-right: 0;
-}
-
 /* Сортировка */
 .sorting-list {
   padding: 0;
@@ -2153,12 +2149,14 @@ button:focus {
   flex-wrap: wrap;
   margin-bottom: 28px;
   background-color: #F7F3EC;
+  border-radius: 3px;
   height: 38px;
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
+  margin-left: 1px;
 }
 
 .sorting-list a.sorting-up::before {
@@ -2196,7 +2194,6 @@ button:focus {
 .sorting-list a.sorting-down:hover::after {
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.66241 0L11.1624 10L0.162415 10' fill='%23000000'/%3E%3C/svg%3E%0A");
 }
-
 
 .sorting-list a {
   display: block;
@@ -2254,7 +2251,7 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 43px;
+  margin-bottom: 48px;
   margin-top: 0;
 }
 
@@ -2265,7 +2262,7 @@ button:focus {
   justify-content: flex-start;
   min-width: 220px;
   height: 318px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   margin-right: 20px;
   background-color: var(--basic-white);
   border: 1px solid #EAEAEA;
@@ -2294,7 +2291,7 @@ button:focus {
 }
 
 .catalog-item h3 {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -2308,10 +2305,9 @@ button:focus {
   margin-top: 18px;
 }
 
-
 .catalog-item-price-standart {
   display: block;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -2337,9 +2333,10 @@ button:focus {
   border: 19px solid;
   border-left-color: var(--basic-red);
 }
+
 .catalog-item-price-old {
   display: block;
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -2349,9 +2346,10 @@ button:focus {
   color: var(--special-input);
   margin-bottom: 13px;
 }
+
 .catalog-item-price-old-no {
   display: block;
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -2383,6 +2381,7 @@ button:focus {
 .button-buy {
   display:none;
 }
+
 .button-bookmark {
   display:none;
 }
@@ -2396,7 +2395,6 @@ button:focus {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  text-align: center;
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px #367315;
   border-radius: 2px;
@@ -2405,8 +2403,11 @@ button:focus {
   height: 38px;
   vertical-align: middle;
   padding-top: 10px;
+  padding-left: 55px;
   margin-bottom: 10px;
-  margin-top: 38px;
+  margin-top: 37px;
+  margin-left: -3px;
+  position: relative;
 }
 
 .catalog-item:hover .button-buy:hover {
@@ -2417,6 +2418,17 @@ button:focus {
   background-color: var(--special-greendark);
 }
 
+.catalog-item:hover .button-buy::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon-cart-catalog.svg");
+  top: 10px;
+  left: 30px;
+}
+
+
 .catalog-item:hover .button-bookmark {
   display: block;
   font-size: 14px;
@@ -2424,13 +2436,14 @@ button:focus {
   border: 3px solid #63A63E;
   box-sizing: border-box;
   border-radius: 2px;
+  margin-left: -3px;
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-navigation);
-  padding-top: 11px;
+  padding-top: 8px;
   width: 135px;
   height: 38px;
-  margin-bottom: 24px;
+  margin-bottom: 37px;
 }
 
 .catalog-item:hover .button-bookmark:hover {
@@ -2448,6 +2461,7 @@ button:focus {
   background-color: var(--basic-background);
   height: 261px;
 }
+
 .perforator-description h2 {
   padding-top: 64px;
   margin: 0;
@@ -2456,12 +2470,12 @@ button:focus {
 
 .perforator-description p {
   font-size: 13px;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   padding: 0;
   margin: 0;
   text-align: left;
+  line-height: 25px;
 }
-
 
 /* Оформление попапа */
 .modal-order {
