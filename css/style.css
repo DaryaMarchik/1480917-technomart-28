@@ -2205,7 +2205,7 @@ button:focus {
 
 .sorting-list a {
   display: block;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 16px;
   color: rgba(0, 0, 0, 0.3);
@@ -2239,7 +2239,7 @@ button:focus {
 }
 
 .sorting-list li:first-child {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-user);
