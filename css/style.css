@@ -239,15 +239,16 @@ img {
 }
 
 input[type="search"]::-webkit-search-cancel-button {
-    display: none;
+  display: none;
 }
+
 input[type="search"] {
--webkit-appearance: textfield;
+  -webkit-appearance: textfield;
 }
 
 .search input[type="search"] {
   background-color: var(--basic-black);
-  -webkit-appearance:none;
+  -webkit-appearance: none;
   border: none;
 }
 
@@ -1575,7 +1576,6 @@ button:focus {
   color: #F3F7F9;
 }
 
-
 .footer-nav-1 {
   display: flex;
   margin: 0;
@@ -2388,16 +2388,13 @@ button:focus {
 }
 
 /* Каталог: динамическое оформление */
-.button-buy {
-  display:none;
-}
-
+.button-buy,
 .button-bookmark {
-  display:none;
+  display: none;
 }
 
 .catalog-item:hover .img-catalog {
-  display:none;
+  display: none;
 }
 
 .catalog-item:hover .button-buy {
