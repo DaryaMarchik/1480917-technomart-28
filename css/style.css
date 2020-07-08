@@ -2247,6 +2247,7 @@ button:focus {
   object-fit: contain;
   height: 160px;
   width: 100%;
+  width: -moz-min-content;
 }
 
 .catalog-item h3 {
