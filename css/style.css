@@ -622,6 +622,7 @@ a.icon-logout:hover {
   position: relative;
   margin: 0;
   padding: 0;
+  background-color: var(--basic-navigation);
 }
 
 .slider-switch button:first-child {
@@ -656,7 +657,24 @@ a.icon-logout:hover {
   list-style: none;
 }
 
-.slider-item h2 {
+.slider-item-1 {
+  position: absolute;
+  content:"";
+  background-image: url("../img/perforators.jpg");
+  width: 620px;
+  height: 266px;
+}
+
+.slider-item-2 {
+  position: absolute;
+  content:"";
+  background-image: url("../img/drills.jpg");
+  width: 620px;
+  height: 266px;
+}
+
+.slider-item-1 h2,
+.slider-item-2 h2 {
   font-size: 36px;
   line-height: 36px;
   color: var(--basic-white);
@@ -729,14 +747,6 @@ a.icon-logout:hover {
 
 .slider-controls .current {
   background-color: var(--basic-white);
-}
-
-.slider-wrapper-1 {
-  background-image: url("../img/perforators.jpg");
-}
-
-.slider-wrapper-2 {
-  background-image: url("../img/drills.jpg");
 }
 
 .promo-item .new-item-promo {
