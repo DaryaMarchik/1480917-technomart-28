@@ -129,6 +129,7 @@ img {
 .search {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .search input[type="search"] {
@@ -240,6 +241,7 @@ input[type="search"] {
   margin: 0;
   position: relative;
   display: inline-block;
+  vertical-align: top;
 }
 
 .links-header .basket::before {
@@ -264,6 +266,7 @@ input[type="search"] {
   margin-left: 14px;
   display: inline-block;
   position: relative;
+  vertical-align: top;
 }
 
 .links-header .basket-full::before {
@@ -288,6 +291,7 @@ input[type="search"] {
   border: none;
   text-align: center;
   margin: 0;
+  vertical-align: middle;
 }
 
 .links-header .bookmark:hover::before,
@@ -415,6 +419,7 @@ input[type="search"] {
   margin-right: 10px;
   margin-top: 46px;
   position: relative;
+  vertical-align: middle;
 }
 
 .entry::before {
@@ -438,6 +443,7 @@ input[type="search"] {
   padding-top: 12px;
   padding-bottom: 12px;
   margin-top: 46px;
+  vertical-align: middle;
 }
 
 .name-user {
@@ -557,7 +563,7 @@ a.icon-logout:active {
   box-shadow: inset 0px -5px 0px rgba(41, 52, 73, 1);
   width: 100%;
   margin-bottom: 60px;
-  display: inline-block;
+  display: block;
 }
 
 .main-navigation a {
@@ -704,7 +710,7 @@ a.icon-logout:active {
 }
 
 .slide-button {
-  display: inline-block;
+  display: block;
   padding: 10px 46px;
   font-size: 14px;
   line-height: 18px;
@@ -1339,7 +1345,7 @@ button:focus {
 }
 
 .slide-service-button {
-  display: inline-block;
+  display: block;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 14px;
@@ -2190,8 +2196,8 @@ button:focus {
 }
 
 .sorting-list a:hover {
-    color: rgba(0, 0, 0, 1);
-    border-bottom: 1px solid #EE3643;
+  color: rgba(0, 0, 0, 1);
+  border-bottom: 1px solid #EE3643;
 }
 
 .sorting-list li {
