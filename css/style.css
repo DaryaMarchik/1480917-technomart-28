@@ -451,6 +451,55 @@ input[type="search"] {
   margin-bottom: 4px;
   width: 299px;
   position: relative;
+  background-color: var(--basic-white);
+}
+
+a.name-authorization,
+a.icon-logout {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a.name-authorization::before {
+  background-image: url("../img/icon-user.svg");
+  position: absolute;
+  content:"";
+  width: 20px;
+  height: 18px;
+  opacity: 0.3;
+  top: 13px;
+  left: 15px;
+}
+
+.name-authorization:active {
+  color: var(--basic-greylight);
+}
+
+a.name-authorization:hover::before {
+  opacity: 1;
+}
+
+a.name-authorization:active::before {
+  opacity: 0.3;
+}
+
+a.icon-logout {
+  display: block;
+  position: absolute;
+  background-image: url("../img/icon-exit.svg");
+  width: 20px;
+  height: 17px;
+  opacity: 0.3;
+  top: 14px;
+  right: 17px;
+}
+
+a.icon-logout:hover {
+  opacity: 1;
+}
+
+a.icon-logout:active {
+  opacity: 0.3;
 }
 
 .user-navigation a:hover {
@@ -458,10 +507,6 @@ input[type="search"] {
 }
 
 .user-navigation a:active {
-  color: var(--basic-greylight);
-}
-
-.name-user:active {
   color: var(--basic-greylight);
 }
 
@@ -482,6 +527,7 @@ input[type="search"] {
 .personal-account a:hover {
   color: var(--basic-red);
 }
+
 .personal-account a:active {
   color: var(--basic-greylight);
 }
@@ -499,44 +545,6 @@ input[type="search"] {
   border-radius: 3px;
   top: 9px;
   left: 89px;
-}
-
-.user-navigation-catalog a.name-user::before {
-  background-image: url("../img/icon-user.svg");
-  position: absolute;
-  content:"";
-  width: 20px;
-  height: 18px;
-  opacity: 0.3;
-  top: 13px;
-  left: 15px;
-}
-
-.user-navigation-catalog a.name-user:hover::before {
-  opacity: 1;
-}
-
-.user-navigation-catalog a.name-user:active::before {
-  opacity: 0.3;
-}
-
-a.icon-logout {
-  display: block;
-  position: absolute;
-  background-image: url("../img/icon-exit.svg");
-  width: 20px;
-  height: 17px;
-  opacity: 0.3;
-  top: 60px;
-  right: 17px;
-}
-
-a.icon-logout:active {
-  opacity: 0.3;
-}
-
-a.icon-logout:hover {
-  opacity: 1;
 }
 
 .wrapper-user-navigation {
