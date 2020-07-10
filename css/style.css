@@ -665,6 +665,10 @@ a.icon-logout:active {
   border: none;
 }
 
+.slider-switch button:focus {
+  outline: inherit;
+}
+
 .slider-list {
   margin: 0;
   padding: 0;
