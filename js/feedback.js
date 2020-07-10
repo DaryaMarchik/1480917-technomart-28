@@ -7,11 +7,12 @@ var feedbackEmail = feedbackPopup.querySelector(".feedback-email-user");
 var feedbackLetter = feedbackPopup.querySelector(".feedback-letter");
 
 var isStorageSupport = true;
-var storage = "";
+var storageName = "";
+var storageEmail = "";
 
 try {
-  storage = localStorage.getItem("name"),
-  storage = localStorage.getItem("email");
+  storageName = localStorage.getItem("name"),
+  storageEmail = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -19,9 +20,9 @@ try {
 feedbackLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.add("modal-show");
-  if (storage) {
-  feedbackName.value = storage
-  feedbackEmail.value = storage;
+  if (isStorageSupport) {
+  feedbackName.value = storageName
+  feedbackEmail.value = storageEmail;
   feedbackLetter.focus();
   } else {
   feedbackName.focus();
