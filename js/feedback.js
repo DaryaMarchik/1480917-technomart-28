@@ -20,12 +20,18 @@ try {
 feedbackLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.add("modal-show");
-  if (isStorageSupport) {
-  feedbackName.value = storageName
-  feedbackEmail.value = storageEmail;
-  feedbackLetter.focus();
+  if (storageName && storageEmail) {
+    feedbackName.value = storageName
+    feedbackEmail.value = storageEmail;
+    feedbackLetter.focus();
+  } else if (storageName) {
+    feedbackName.value = storageName
+    feedbackEmail.focus();
+  } else if (storageEmail) {
+    feedbackEmail.value = storageEmail;
+    feedbackName.focus();
   } else {
-  feedbackName.focus();
+    feedbackName.focus();
   }
 });
 
